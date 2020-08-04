@@ -51,12 +51,12 @@
 
             <div class="container">
                 <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <input type="text" placeholder="Enter Username" id="uname" required>
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" placeholder="Enter Password" id="psw" required>
 
-                <button type="submit">Login</button>
+                <button type="submit" onclick="getInputValue();">Login</button>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
@@ -366,6 +366,17 @@
             </div>
         </div>
     </footer>
+
+    <!--Collect login values-->
+
+    <script>
+        function getInputValue() {
+            // Selecting the input element and get its value 
+            var userVal = document.getElementById("uname").value;
+            var passVal = document.getElementById("psw").value;
+        }
+    </script>
+
 </body>
 
 </html>
